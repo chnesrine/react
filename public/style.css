@@ -1,0 +1,211 @@
+/* ==================== Global Styles ==================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/Image-Bilan-Carbone.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ==================== Navbar Styles ==================== */
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent dark background for navbar */
+    width: 100%;
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-title {
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.auth-buttons a {
+    text-decoration: none;
+}
+
+.auth-buttons button {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.auth-buttons button:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+/* ==================== Form Styles (Login, Signup, Contact) ==================== */
+main {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Adding border and styling to the form container */
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #4CAF50; /* Green border for a nice frame */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling the form headers */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Form styling */
+label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* ==================== Footer Styles ==================== */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Style pour les icônes de réseaux sociaux */
+.social-links {
+    margin-top: 10px;
+}
+
+.social-icon {
+    color: green;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: goldenrod; /* Change color on hover */
+}
+/* Empreinte carbone result section */
+.result-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin: 40px auto;
+}
+
+.result-container h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.result-container p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.result-container .carbon-value {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 30px;
+}
+
+.result-container .button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.result-container .button:hover {
+    background-color: #45a049;
+}
+
+.result-container .link {
+    display: block;
+    margin-top: 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.result-container .link:hover {
+    text-decoration: underline;
+}
+

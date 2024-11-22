@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenTripper</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .auth-buttons button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .auth-buttons button:hover {
+            background-color: #45a049;
+        }
+
+        .site-title {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        /* Carbon Calculator */
+        .carbon-calculator {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .carbon-calculator input, .carbon-calculator select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .carbon-calculator button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .carbon-calculator button:hover {
+            background-color: #45a049;
+        }
+
+        /* Carousel */
+        .carousel-container {
+            width: 100%;
+            max-width: 1200px;
+            overflow: hidden;
+            margin-top: 40px;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Blog section */
+        .blogs {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .blog-post {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px 0;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            opacity: 1;
+            transform: translateY(0);
+            transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-10px);
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+    </style>
+
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    
+    <!-- jQuery (required for Slick Carousel) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick Carousel JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1 class="site-title">GreenTripper</h1>
+            <div class="auth-buttons">
+                <button onclick="location.href='/login'">Login</button>
+                <button onclick="location.href='/signup'">Signup</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carousel Section -->
+    <section class="carousel-container">
+        <div class="carousel">
+            <div><img src="/images/image1.jpg" alt="Blog Image 1"></div>
+            <div><img src="/images/image2.jpg" alt="Blog Image 2"></div>
+            <div><img src="/images/image3.jpg" alt="Blog Image 3"></div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blogs">
+        <div class="blog-post">
+            <h2>Explore Nature with GreenTripper</h2>
+            <p>Discover how your travel choices impact the environment and make sustainable decisions.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="blog-post">
+            <h2>Eco-friendly Travel Tips</h2>
+            <p>Learn practical tips for reducing your carbon footprint during your trips.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="blog-post">
+            <h2>Top Green Destinations</h2>
+            <p>Explore some of the most sustainable travel destinations around the world.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="blog-post">
+            <h2>How GreenTripper Calculates CO2 Impact</h2>
+            <p>Find out how our platform calculates the carbon footprint of your travels and helps you make better choices.</p>
+            <a href="#">Read More</a>
+        </div>
+    </section>
+    
+    <!-- Form to calculate carbon footprint -->
+    <section class="carbon-calculator">
+        <h2>Calcul de l'empreinte carbone</h2>
+        <form action="/carbons" method="POST" id="carbon-form">
+            <label for="distance">Distance (en km):</label>
+            <input type="number" id="distance" name="distance" placeholder="Ex: 1000" required>
+            
+            <label for="transport">Mode de transport:</label>
+            <select id="transport" name="transport" required>
+                <option value="car">Voiture</option>
+                <option value="plane">Avion</option>
+                <option value="train">Train</option>
+                <option value="bus">Autobus</option>
+            </select>
+
+            <label for="passengers">Nombre de passagers:</label>
+            <input type="number" id="passengers" name="passengers" placeholder="Ex: 2" required>
+
+            <button type="submit">Calculer l'empreinte carbone</button>
+        </form>
+    </section>
+    <a href="/contact">Contactez-nous</a>
+    <footer>
+        <p>&copy; 2024 GreenTripper. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Initialiser le carrousel avec Slick après que le DOM soit complètement chargé
+        $(document).ready(function(){
+            $('.carousel').slick({
+                autoplay: true,       // Permet le défilement automatique
+                autoplaySpeed: 3000,  // Défile toutes les 3 secondes
+                arrows: true,         // Ajoute les flèches de navigation
+                dots: true,           // Ajoute des points de navigation
+                infinite: true,       // Permet la boucle infinie
+                speed: 500,           // Durée de la transition
+            });
+        });
+    </script>
+    <a href="/"><button>Home</button></a>
+
+</body>
+</html>

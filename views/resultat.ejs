@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultat Calcul Empreinte Carbone</title>
+    <style>
+        /* Empreinte carbone result section */
+        .result-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            margin: 40px auto;
+        }
+
+        .result-container h1 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .result-container p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .result-container .carbon-value {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 30px;
+        }
+
+        .result-container .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .result-container .button:hover {
+            background-color: #45a049;
+        }
+
+        .result-container .link {
+            display: block;
+            margin-top: 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .result-container .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="result-container">
+        <h1>Empreinte Carbone Calculée</h1>
+        <p>Votre empreinte carbone a été calculée avec succès ! Voici les résultats :</p>
+        <!-- Afficher la valeur dynamique de l'empreinte carbone -->
+        <div class="carbon-value"><%= carbonFootprint %> kg CO2</div>
+        <p>Bravo pour vos efforts vers un avenir plus durable !</p>
+        <button class="button" onclick="window.location.href='/'">Retour à l'accueil</button>
+
+        <a href="/contact" class="link">Contactez-nous pour plus d'informations</a>
+    </div>
+
+</body>
+</html>
